@@ -8,25 +8,32 @@
 <body>
     <script>
 
+        let humanScore = 0;
+        let computerScore = 0
+
         function getComputerChoice() {
             let randomNumber = Math.floor(Math.random() * 3);
             if (randomNumber === 0) {
-                return "rock";
+                computerChoice = "rock";
+                return computerChoice;
             } else if (randomNumber === 1) {
-                return "paper";
+                computerChoice = "paper";
+                return computerChoice;
             } else {
-                return "scissors";
+                computerChoice = "scissors"
+                return computerChoice;
             }
         }   
 
-        function getHumanChoice () {
-            let input = prompt("Pick rock,paper or scissors!")
-            if (input !== "rock" && input !== "paper" && input !== "scissors") {
-                return "You typed invalid choice!";
-            } return input;
-        }
+        // function getHumanChoice () {
+        //     let input = prompt("Pick rock,paper or scissors!")
+        //     if (input !== "rock" && input !== "paper" && input !== "scissors") {
+        //         return "You typed invalid choice!";
+        //     } return input;
+        // }
 
-        console.log(getHumanChoice ())
+        // function playRound ()
+        // console.log(getHumanChoice ())
 
 
     </script>

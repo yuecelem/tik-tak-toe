@@ -9,15 +9,24 @@
     <script>
 
         function getComputerChoice() {
-            let x = Math.floor(Math.random() * 3);
-            if (x = 0) {
-                
+            let randomNumber = Math.floor(Math.random() * 3);
+            if (randomNumber === 0) {
+                return "rock";
+            } else if (randomNumber === 1) {
+                return "paper";
+            } else {
+                return "scissors";
             }
-        
         }   
 
-        console.log(getComputerChoice())
+        function getHumanChoice () {
+            let input = prompt("Pick rock,paper or scissors!")
+            if (input !== "rock" && input !== "paper" && input !== "scissors") {
+                return "You typed invalid choice!";
+            } return input;
+        }
 
+        console.log(getHumanChoice ())
 
 
     </script>

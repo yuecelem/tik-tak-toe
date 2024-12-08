@@ -9,8 +9,8 @@
     <script>
 
         let humanScore = 0;
-        let computerScore = 0
-
+        let computerScore = 0;
+        
         function getComputerChoice() {
             let randomNumber = Math.floor(Math.random() * 3);
             if (randomNumber === 0) {
@@ -25,16 +25,39 @@
             }
         }   
 
-        // function getHumanChoice () {
-        //     let input = prompt("Pick rock,paper or scissors!")
-        //     if (input !== "rock" && input !== "paper" && input !== "scissors") {
-        //         return "You typed invalid choice!";
-        //     } return input;
-        // }
+        function getHumanChoice () {
+            let humanChoice = prompt("Pick rock,paper or scissors!")
+            if (humanChoice !== "rock" && humanChoice !== "paper" && humanChoice !== "scissors") {
+                return "You typed invalid choice!";
+            } return humanChoice;
+        }
+        
+        function playRound (computerChoice, humanChoice) {
+            let showTie = "Tie! Noone Wins."; 
+            let showComputerWins = "Computer Wins!"
+            let showPlayerWins = "Player Wins!"
+            if (computerChoice == humanChoice) {
+                return showTie;
+            } else if (computerChoice == "rock" && humanChoice == "scissors") {
+                computerScore++;
+                return showComputerWins;
+            } else if (computerChoice == "scissors" && humanChoice == "paper"){
+                computerScore++;
+                return showComputerWins;
+            } else if (computerChoice == "paper" && humanChoice == "rock"){
+                computerScore++;
+                return showComputerWins;
+            } else {
+                humanScore++;
+                return showPlayerWins
+            }
+        }
 
-        // function playRound ()
-        // console.log(getHumanChoice ())
+        
 
+
+        console.log(playRound("scissors", "paper"))
+        console.log(humanScore)    
 
     </script>
 </body>

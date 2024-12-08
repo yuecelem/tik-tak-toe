@@ -37,7 +37,8 @@
         function getHumanChoice () {
             let humanChoice = prompt("Pick rock,paper or scissors!")
             if (humanChoice !== "rock" && humanChoice !== "paper" && humanChoice !== "scissors") {
-                return getHumanChoice();
+                getHumanChoice()
+                return ;
             } return humanChoice;
         }
 
@@ -78,8 +79,6 @@
         
 
         }
-
-        playGame()
 
     </script>
 </body>
